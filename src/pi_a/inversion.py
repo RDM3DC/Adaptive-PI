@@ -22,3 +22,15 @@ def invert_point_pia(P, C: Circle, K: CurvatureField):
         raise ValueError("Cannot invert center")
     s = r2 / d2
     return (ox + s*dx, oy + s*dy)
+
+
+def power_decomposition_pia(P, C: Circle, K: CurvatureField):
+    """Placeholder for splitting power into Euclidean + curvature flux terms.
+
+    Returns (euclidean_power, curvature_correction) so that their sum approximates
+    power_of_point_pia. Currently curvature term is zero (flat proxy).
+    """
+    (x,y), (ox,oy), r = P, C.O, C.r
+    euclid = (x-ox)**2 + (y-oy)**2 - r**2
+    curvature = 0.0  # TODO: integrate curvature over a minimal annulus / chord disk
+    return euclid, curvature

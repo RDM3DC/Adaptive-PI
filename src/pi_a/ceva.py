@@ -32,11 +32,13 @@ def trig_ceva_pia(A: Point, B: Point, C: Point,
     # Euclidean angles appearing in trig-Ceva ratios
     BAD = angle_at(B, A, D); DAC = angle_at(D, A, C)
     CBE = angle_at(C, B, E); EBA = angle_at(E, B, A)
-    ACF = angle_at(A, C, F); FCA = angle_at(F, C, A)
+    ACF = angle_at(A, C, F)
+    # Denominator at vertex C must be ∠FCB (not FCA) for the classical trig‑Ceva identity.
+    FCB = angle_at(F, C, B)
 
     # Euclidean base product
     num = _safe_sin(BAD) * _safe_sin(CBE) * _safe_sin(ACF)
-    den = _safe_sin(DAC) * _safe_sin(EBA) * _safe_sin(FCA)
+    den = _safe_sin(DAC) * _safe_sin(EBA) * _safe_sin(FCB)
     base = num / den if den != 0 else float("inf")
 
     if not use_flux:

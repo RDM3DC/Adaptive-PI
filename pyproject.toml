@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pi-a-geometry"
+version = "0.1.0"
+description = "Adaptive pi (pi_a) geometry primitives and reference spec"
+readme = "README.md"
+authors = [
+  { name = "Ryan K. Stephens" },
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"

@@ -29,10 +29,16 @@ This suggests Riemann zeros emerge from critical symmetry axes in non-Euclidean 
 
 ## Tasks
 
-- [ ] Build a geodesic flow simulator under πₐ perturbations.
-- [ ] Model prime-induced geodesic closures with varying Re(s).
+- [x] Build a geodesic flow simulator under πₐ perturbations.
+- [x] Model prime-induced geodesic closures with varying Re(s).
 - [ ] Determine if closure-lock only happens at Re(s) = 1/2 in curvature field.
 - [ ] Relate oscillations to spacing between zeta zeros.
+
+The new `geodesic_flow` integrator in `pi_a.geodesics` performs a simple
+discrete integration of trajectories in a curvature field and allows a
+"prime forcing" term scaled by the distance of \(\Re(s)\) from the critical
+line. This provides a baseline tool for exploring closure behaviour near
+\(\Re(s)=1/2\).
 
 ---
 

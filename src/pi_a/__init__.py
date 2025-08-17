@@ -12,3 +12,4 @@ from .miquel import miquel_point_euclid, miquel_point_pia
 from .ninepoint import nine_points, ninepoint_curve_pia
 from .projective import cross_ratio, cross_ratio_pia
 from .cyclic import opposite_angle_sum_pia, is_pia_cyclic_quad
+from .geodesics import geodesic_circle, geodesic_flow

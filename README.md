@@ -112,4 +112,4 @@ git push -u origin main
 
 ## Citation (placeholder)
 
-> Stephens, R.K. (2025). *Adaptive \u03c0 (\u03c0\u2090) Geometry: Flat\u2011Limit Exactness and First\u2011Order Curvature Corrections.* RDM3DC Labs. Version 0.1.
+> *Adaptive \u03c0 (\u03c0\u2090) Geometry: Flat\u2011Limit Exactness and First\u2011Order Curvature Corrections.* RDM3DC Labs. Version 0.1.

@@ -97,4 +97,16 @@ pip install -e .
 
 ---
 
+Open Problems (IMO-flavored, Adaptive π)
 
+We propose collecting geometry problems that are classically solved in Euclidean space but remain open or only partially understood under πₐ corrections:
+
+Trig-Ceva ⇔ Trig-Menelaus DualityVerify whether the exponential flux correction factor preserves the equivalence between Ceva concurrency and Menelaus collinearity.
+
+Miquel Point StabilityFor a quadrilateral, the Miquel point lies on all four circle intersections. Does a πₐ-perturbed version exist with bounded first-order drift?
+
+Nine-Point Circle GeneralizationDefine an adaptive π nine-point curve. Where is its center located under curvature fields? Is it close to Euler line in first order?
+
+Projective Cross-Ratio DriftQuantify how cross-ratios of four collinear points deform under πₐ corrections. Can we prove bounded distortion?
+
+Cyclic Quadrilateral AnglesClassical: opposite angles sum to 180°. Adaptive π: do they sum to πₐ + O(K)? How uniform is the correction across fields?

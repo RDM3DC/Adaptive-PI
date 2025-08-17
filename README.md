@@ -97,19 +97,4 @@ pip install -e .
 
 ---
 
-## How to publish
 
-```bash
-git init
-git add .
-git commit -m "init: adaptive-pi-geometry v0.1 bootstrap"
-git branch -M main
-git remote add origin git@github.com:RDM3DC/adaptive-pi-geometry.git
-git push -u origin main
-```
-
----
-
-## Citation (placeholder)
-
-> *Adaptive \u03c0 (\u03c0\u2090) Geometry: Flat\u2011Limit Exactness and First\u2011Order Curvature Corrections.* RDM3DC Labs. Version 0.1.

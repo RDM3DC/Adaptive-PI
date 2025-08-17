@@ -25,7 +25,7 @@ def trig_ceva_pia(A: Point, B: Point, C: Point,
                   center_hint: Point | None = None) -> float:
     """Return the trig-Ceva product under πₐ.
 
-    In flat space (K≡⁰), the value equals the Euclidean trig-Ceva product.
+    In flat space (K≡0), the value equals the Euclidean trig-Ceva product.
     With curvature, we optionally multiply by a first-order factor derived from
     sector-flux imbalances at the three vertices.
     """

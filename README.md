@@ -1,5 +1,9 @@
 # adaptive-pi-geometry
 
+![CI](https://github.com/RDM3DC/Adaptive-PI/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.10_|_3.11_|_3.12-blue)
+
 A lightweight Python library + reference spec for **Adaptive \u03c0 (\u03c0\u2090)** geometry: a unifying framework that reduces to Euclidean geometry when curvature \u2192 0 and extends gracefully to curved/inhomogeneous settings using first\u2011order Gauss\u2013Bonnet corrections.
 
 ---

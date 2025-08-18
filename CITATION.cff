@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: Adaptive π Geometry (πₐ)
+version: 0.1.0
+date-released: 2025-08-17
+authors:
+  - family-names: McKenna
+    given-names: Ryan
+  - family-names: Stephens
+    given-names: Ryann Karly
+license: MIT
+repository-code: https://github.com/RDM3DC/Adaptive-PI
+preferred-citation:
+  type: report
+  title: Adaptive π (πₐ) Geometry: Flat-Limit Exactness and First-Order Curvature Corrections
+  authors:
+    - family-names: Stephens
+      given-names: Ryann Karly
+    - family-names: McKenna
+      given-names: Ryan
+  year: 2025

@@ -141,6 +141,12 @@ Walkthrough (when added) will live in `docs/SOLVED_IMPLEMENTATION_PACK.md` (plac
 
 ---
 
+## Accepted Proof Release Pack
+
+The repo ships with a `paper_arxiv/` directory containing a camera-ready LaTeX skeleton and a `press_kit/` with a press release, FAQ, talking points, and slides outline. See `prize_checklist.md` for indicative prize-submission steps and `README_RELEASE.md` for integration notes.
+
+---
+
 ## Roadmap
 
 * **v0.2**: Explicit \u03c0\u2090 Ceva/Menelaus numerics (build sector/flux terms for split points).

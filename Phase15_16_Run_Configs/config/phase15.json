@@ -1,0 +1,9 @@
+{
+  "n_primes": 1000000000,
+  "tmax": 22000.0,
+  "tstep": 0.25,
+  "method": "finufft",
+  "zeros_csv": "data/zeros_up_to_22000.csv",
+  "tmin_eval": 20000.0,
+  "outdir": "outputs_phase15"
+}

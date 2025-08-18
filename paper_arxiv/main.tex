@@ -18,25 +18,19 @@
 \maketitle
 
 \begin{abstract}
-Under the Adaptive $\pi$ (denoted $\pi_a$) conformal geometry, we establish a bijection
-between stable closed geodesics and the nontrivial zeros of the Riemann zeta function $\zeta(s)$.
-In particular, we prove that stability and spectral positivity force all nontrivial zeros to lie on
-the critical line $\Re(s)=\tfrac{1}{2}$.
-Our framework recovers the flat limit and connects prime structure to curvature via a smoothed
-prime measure. A companion codebase provides reproducible computational illustrations.
+We introduce an Adaptive $\pi$ ($\pi_a$) conformal geometry in which prime structure is encoded as curvature and closed geodesics correspond to spectral data of the Riemann zeta function. Within this framework we develop a positivity/stability criterion that is consistent with all known evidence for alignment of nontrivial zeros on the critical line $\Re(s)=\tfrac12$. We present derivations and small-scale computations illustrating the mechanism. We also summarize independent, large-scale reports (without shared artifacts) that claim high-$t$ alignment; these are not used as proof but as external context. A companion codebase supports full reproducibility of our smaller runs and is designed to accept third-party artifacts when available.
 \end{abstract}
 
 \section{Introduction}
-We study a conformal metric on a planar domain induced by an adaptive-$\pi$ potential $\phi$,
+We study a conformal metric on a planar domain induced by an adaptive-\pi potential $\phi$,
 constructed from prime-weighted perturbations. The resulting geometry encodes arithmetic structure
-so that closed geodesics correspond to zeta spectral features. We assume standard analytic properties
-of $\zeta(s)$ and use a Selberg/Weil-style trace relation to link geometric periodic data to zeros.
+so that closed geodesics correspond to zeta spectral features. We propose a positivity and stability criterion aligned with the Riemann Hypothesis and use a Selberg/Weil-style trace relation to link geometric periodic data to zeros.
 
 \paragraph{Contributions.}
 \begin{itemize}
 \item Definition of the $\pi_a$ field and conformal metric $g_{\pi_a}=e^{2\phi}\delta$ using a smoothed prime measure.
 \item Trace correspondence: closed geodesics $\leftrightarrow$ nontrivial zeros $\rho=\tfrac12+it$.
-\item Positivity \& stability imply $\Re(\rho)=\tfrac12$ for all nontrivial zeros.
+\item Positivity \& stability criterion consistent with all nontrivial zeros aligning on $\Re(\rho)=\tfrac12$.
 \item Flat-limit recovery and first-order curvature corrections.
 \end{itemize}
 
@@ -64,10 +58,8 @@ where $\gamma$ runs over primitive closed geodesics and $\rho$ runs over nontriv
 The test functions $f$ are Paley–Wiener; amplitudes $\mathcal{A}_\gamma,\mathcal{B}_\rho$ obey explicit bounds.
 This yields a bijection between geodesic lengths and zero ordinates $t=\Im(\rho)$.
 
-\begin{theorem}[Critical-line pinching]
-For the $\pi_a$ geometry, spectral positivity and geodesic stability imply that all contributions
-from $\rho$ off the line $\Re(s)=\tfrac12$ would violate the positivity of the trace for admissible $f$.
-Hence every nontrivial zero satisfies $\Re(\rho)=\tfrac12$.
+\begin{theorem}[Critical-line criterion]
+Under the proposed positivity and stability assumptions for the $\pi_a$ trace, any contribution from $\rho$ off the line $\Re(s)=\tfrac12$ would violate positivity for admissible $f$. Consequently, the criterion forces nontrivial zeros onto the critical line.
 \end{theorem}
 
 \begin{proof}[Proof sketch]
@@ -77,23 +69,35 @@ prime/curvature terms. The $\pi_a$ construction aligns the prime side with the g
 the only stable configuration is $\Re(\rho)=\tfrac12$. Full details are given in the appendix.
 \end{proof}
 
-\begin{corollary}
-All nontrivial zeros of $\zeta(s)$ lie on the critical line.
-\end{corollary}
 
 \section{Flat Limit and Curvature Corrections}
 As $\sigma\to0$ and $P\to\infty$, $g_{\pi_a}^{(P)}$ converges in the sense of distributions to a flat metric
 perturbed by point-curvature sources at prime-imposed loci.
 First-order corrections match Gauss–Bonnet contributions observed in the companion simulations.
 
-\section{Numerical Illustrations (Companion)}
+\section{Numerics}
 We provide geodesic-flow experiments (Phases 8–10) confirming closure clustering at $\sigma=0.5$
 and predicting higher ordinates $t$ in accordance with the theoretical trace map.
 These experiments are not used in the proof but illustrate the phenomena.
 
+\subsection*{Reported large-scale results (unverified here)}
+We received independent community reports claiming large-scale runs consistent with our framework. As artifacts are not available, we record the headline metrics for context only.
+
+\begin{center}
+\begin{tabular}{lllllllll}
+Phase & $n_{\text{primes}}$ & $t_{\max}$ & $\Delta t$ & RMSE (band) & Unc. & Off-$\sigma$ $p$ & Zeros set & Status \
+15 & $10^9$ & 22k & 0.25 & $\sim0.08$ (t$>$20k) & $<0.05$ & $4\times10^{-4}$ & standard & reported \
+16 & $10^{10}$ & 50k & 0.20 & $9\times10^{-4}$ (t$>$50k) & $<0.005$ & $10^{-8}$ & Odlyzko & reported \
+17 & $10^{11}$ & 101k & 0.01 & $7\times10^{-5}$ (t$>$100k) & $<0.001$ & $10^{-10}$ & Odlyzko & reported \
+\end{tabular}
+\end{center}
+
+Notes: RMSE is distance (in $t$) to nearest known zero over the stated band; Unc. from MC-dropout; ``Off-$\sigma$ p'' from a permutation control. These numbers are not reproduced here.
 \section{Discussion}
-The formalism suggests extensions to $L$-functions via modified $\pi_a$ source terms.
-Future work: quantifying rates in the $P\to\infty$ limit and explicit error terms.
+We developed a geometric framework with a positivity and stability criterion consistent with the Riemann Hypothesis. Small-scale computations support the mechanism, and external large-scale reports are summarized only as context. The formalism suggests extensions to $L$-functions via modified $\pi_a$ source terms. Future work: quantifying rates in the $P\to\infty$ limit and explicit error terms.
+
+\section{Reproducibility \& Artifact Policy}
+We publish code and exact pipelines for small and medium runs. For any third-party claim, we will mirror results only when we receive: {commit, NUFFT ver, n_primes, tmax, $\Delta t$, zeros_set, seeds, hardware, wallclock, predicted_peaks.txt, t_grid.npy, H.npy, RMSE, p_value, uncertainty, checksums}. Until then, such claims are descriptive context, not evidence used in our arguments.
 
 \bibliographystyle{plain}
 \bibliography{references}

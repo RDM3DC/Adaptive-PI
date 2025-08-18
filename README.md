@@ -141,6 +141,18 @@ Walkthrough (when added) will live in `docs/SOLVED_IMPLEMENTATION_PACK.md` (plac
 
 ---
 
+## Phase results & large-scale reports
+
+Small and medium-scale runs through Phase 14 with figures are included in this repository. Later phases are independent reports without shared artifacts and are marked as reported.
+
+| Phase | n_primes | t_max | Δt | RMSE (band) | Unc. | Off-σ p | Zeros set | Status |
+|------|---------|-------|----|-------------|------|---------|-----------|--------|
+|15|1e9|22k|0.25|~0.08 (t>20k)|<0.05|4e-4|standard|reported|
+|16|1e10|50k|0.20|9e-4 (t>50k)|<0.005|1e-8|Odlyzko|reported|
+|17|1e11|101k|0.01|7e-5 (t>100k)|<0.001|1e-10|Odlyzko|reported|
+
+---
+
 ## Accepted Proof Release Pack
 
 The repo ships with a `paper_arxiv/` directory containing a camera-ready LaTeX skeleton and a `press_kit/` with a press release, FAQ, talking points, and slides outline. See `prize_checklist.md` for indicative prize-submission steps and `README_RELEASE.md` for integration notes.

@@ -1,0 +1,15 @@
+{
+  "count_sigma_05": 15,
+  "predicted_peaks_sigma_05": [],
+  "rmse_sigma_05_tgt100": null,
+  "perm_off_0.45": {
+    "rmse_on": null,
+    "rmse_off": null,
+    "p_perm": null
+  },
+  "perm_off_0.55": {
+    "rmse_on": null,
+    "rmse_off": null,
+    "p_perm": null
+  }
+}

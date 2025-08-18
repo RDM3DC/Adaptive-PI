@@ -1,0 +1,9 @@
+{
+  "mode": "cem",
+  "predicted_peaks_ge_t_threshold": [],
+  "num_samples": 800,
+  "epochs": 6,
+  "batch": 40,
+  "tmax": 160.0,
+  "t_threshold": 110.0
+}
